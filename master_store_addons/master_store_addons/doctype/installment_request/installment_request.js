@@ -34,7 +34,6 @@ frappe.ui.form.on('Installment Request', {
 
 			if(data.message) {
 				
-				console.log(row.rate, data.message.price_list_rate);
 				row.rate = data.message.price_list_rate;
 
 				row.amount = row.qty * row.rate
@@ -63,7 +62,6 @@ frappe.ui.form.on('Installment Request Table', {
 				callback: function(r) {
 					let data = r.message;
 					if(data) {
-						console.log(d, data);
 						d.rate = data.price_list_rate
 						
 					}
@@ -90,7 +88,6 @@ frappe.ui.form.on('Installment Request Table', {
 				callback: function(r) {
 					let data = r.message;
 					if(data) {
-						console.log(d, data);
 						d.rate = data.price_list_rate
 
 						let total_amount = d.qty * d.rate
