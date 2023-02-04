@@ -102,13 +102,11 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	"Installment Request": {
+		"validate": "master_store_addons.master_store_addons.api.on_save"
+	}
+}
 
 # Scheduled Tasks
 # ---------------
@@ -190,3 +188,17 @@ app_license = "MIT"
 # auth_hooks = [
 #	"master_store_addons.auth.validate"
 # ]
+
+fixtures = [
+    {
+        "dt": "Custom Field",
+        "filters": [
+            [
+                "fieldname", "in", (
+                    # Sales Order
+                    "msa_installment_request"
+                )
+            ]
+        ]
+    }
+]
