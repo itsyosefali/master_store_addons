@@ -1,0 +1,57 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:cto_option",
+ "creation": "2023-02-05 13:59:28.525018",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "cto_option",
+  "cto_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "cto_option",
+   "fieldtype": "Data",
+   "label": "CTO Option",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "cto_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "CTO Type",
+   "options": "CTO Type",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-02-05 14:29:52.181563",
+ "modified_by": "Administrator",
+ "module": "master_store_addons",
+ "name": "CTO Option",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "cto_type",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

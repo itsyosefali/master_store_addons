@@ -3,7 +3,6 @@
 
 frappe.ui.form.on('Installment Request', {
 	refresh: function(frm) {
-		console.log('imad told me to do it')
 		frm.set_query('price_list', function(){
 			return {
 				filters: {
@@ -13,7 +12,6 @@ frappe.ui.form.on('Installment Request', {
 		})
 	},
 	price_list: async function(frm) {
-		console.log('asd');
 		for(let i = 0; i < frm.doc.installment_request_table.length; i++) {
 			let row = frm.doc.installment_request_table[i];
 
@@ -73,7 +71,6 @@ frappe.ui.form.on('Installment Request Table', {
 	},
 	qty: function(frm, cdt, cdn) {
 		let d = locals[cdt][cdn]
-
 		frappe.call(
 			{
 				method: "frappe.client.get_value",
