@@ -196,7 +196,8 @@ fixtures = [
             [
                 "fieldname", "in", (
                     # Sales Order
-                    "msa_installment_request"
+                    "msa_installment_request",
+                    "msa_configure_to_order"
                 )
             ]
         ]
