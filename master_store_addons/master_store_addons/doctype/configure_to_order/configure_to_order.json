@@ -9,7 +9,15 @@
  "engine": "InnoDB",
  "field_order": [
   "naming_series",
-  "amended_from"
+  "amended_from",
+  "section_break_kc8ao",
+  "customer",
+  "customer_name",
+  "customer_phone",
+  "item_code",
+  "item_name",
+  "section_break_bnhce",
+  "cto_option_details"
  ],
  "fields": [
   {
@@ -26,15 +34,61 @@
    "options": "Configure To Order",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "section_break_kc8ao",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fetch_from": "customer.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
+  },
+  {
+   "fetch_from": "customer.customer_mobile_number",
+   "fieldname": "customer_phone",
+   "fieldtype": "Data",
+   "label": "Customer Phone"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item Code",
+   "options": "Item"
+  },
+  {
+   "fetch_from": "item_code.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name"
+  },
+  {
+   "fieldname": "section_break_bnhce",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "cto_option_details",
+   "fieldtype": "Table",
+   "label": "CTO Option Details",
+   "options": "CTO Option Table",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-02-05 14:12:43.148817",
+ "modified": "2023-02-06 12:52:56.925826",
  "modified_by": "Administrator",
  "module": "master_store_addons",
  "name": "Configure To Order",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
