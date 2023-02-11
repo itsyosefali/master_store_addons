@@ -5,6 +5,20 @@
 
 //Filtering Child table linked field based on field in the same child table 
 
+frappe.ui.form.on("Configure To Order" ,{
+	item_group_filter: function(frm) {
+		frm.set_query("item_code", function() {
+			return {  
+				filters:[
+					['item_group', '=', frm.doc.item_group_filter]
+				]
+			}
+    
+		})
+	}
+	}
+);
+
 frappe.ui.form.on("Configure To Order", "refresh", function(frm) {
 	frm.fields_dict['cto_option_details'].grid.get_field('cto_option').get_query = function(doc, cdt, cdn) {
 		var child = locals[cdt][cdn];
@@ -37,4 +51,3 @@ frappe.ui.form.on("CTO Option Table", "cto_type", function(frm) {
 		}
 	}
 );
-	

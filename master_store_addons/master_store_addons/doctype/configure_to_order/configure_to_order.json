@@ -9,15 +9,19 @@
  "engine": "InnoDB",
  "field_order": [
   "naming_series",
-  "amended_from",
   "section_break_kc8ao",
   "customer",
   "customer_name",
   "customer_phone",
+  "column_break_zem2c",
+  "item_group_filter",
   "item_code",
   "item_name",
   "section_break_bnhce",
-  "cto_option_details"
+  "cto_option_details",
+  "section_break_unqam",
+  "addionatal_notes",
+  "amended_from"
  ],
  "fields": [
   {
@@ -42,20 +46,24 @@
   {
    "fieldname": "customer",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Customer",
-   "options": "Customer"
+   "options": "Customer",
+   "reqd": 1
   },
   {
    "fetch_from": "customer.customer_name",
    "fieldname": "customer_name",
    "fieldtype": "Data",
-   "label": "Customer Name"
+   "label": "Customer Name",
+   "read_only": 1
   },
   {
    "fetch_from": "customer.customer_mobile_number",
    "fieldname": "customer_phone",
    "fieldtype": "Data",
-   "label": "Customer Phone"
+   "label": "Customer Phone",
+   "read_only": 1
   },
   {
    "fieldname": "item_code",
@@ -67,7 +75,8 @@
    "fetch_from": "item_code.item_name",
    "fieldname": "item_name",
    "fieldtype": "Data",
-   "label": "Item Name"
+   "label": "Item Name",
+   "read_only": 1
   },
   {
    "fieldname": "section_break_bnhce",
@@ -79,12 +88,31 @@
    "label": "CTO Option Details",
    "options": "CTO Option Table",
    "reqd": 1
+  },
+  {
+   "fieldname": "section_break_unqam",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "addionatal_notes",
+   "fieldtype": "Small Text",
+   "label": "Addionatal Notes"
+  },
+  {
+   "fieldname": "column_break_zem2c",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "item_group_filter",
+   "fieldtype": "Link",
+   "label": "Item Filtered base on this Item Group",
+   "options": "Item Group"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-02-06 12:52:56.925826",
+ "modified": "2023-02-08 15:39:11.623396",
  "modified_by": "Administrator",
  "module": "master_store_addons",
  "name": "Configure To Order",

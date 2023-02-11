@@ -39,8 +39,7 @@ frappe.ui.form.on('Installment Request', {
 			}
 		}
 		frm.refresh_fields()
-
-	}
+	},
 });
 
 frappe.ui.form.on('Installment Request Table', {

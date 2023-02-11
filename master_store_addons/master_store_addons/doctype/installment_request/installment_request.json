@@ -14,8 +14,10 @@
   "bank_name",
   "customer",
   "customer_phone",
+  "column_break_6fihz",
   "installment_period",
   "price_list",
+  "default_currency",
   "section_break_8",
   "installment_request_table",
   "total_amount",
@@ -32,7 +34,9 @@
   {
    "fieldname": "date",
    "fieldtype": "Date",
-   "label": "Date"
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_3",
@@ -41,13 +45,17 @@
   {
    "fieldname": "bank_name",
    "fieldtype": "Data",
-   "label": "Bank Name"
+   "in_list_view": 1,
+   "label": "Bank Name",
+   "reqd": 1
   },
   {
    "fieldname": "customer",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Customer",
-   "options": "Customer"
+   "options": "Customer",
+   "reqd": 1
   },
   {
    "fetch_from": "customer.customer_mobile_number",
@@ -59,8 +67,10 @@
   {
    "fieldname": "installment_period",
    "fieldtype": "Select",
-   "label": "installment_period",
-   "options": "\n3\n6\n9\n12\n18\n24"
+   "in_list_view": 1,
+   "label": "Installment Period",
+   "options": "\n3\n6\n9\n12\n18\n24",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_8",
@@ -92,6 +102,16 @@
    "fieldname": "total_amount",
    "fieldtype": "Currency",
    "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_6fihz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_currency",
+   "fieldtype": "Link",
+   "label": "Billing Currency",
    "options": "Currency"
   }
  ],
@@ -104,7 +124,7 @@
    "link_fieldname": "msa_installment_request"
   }
  ],
- "modified": "2023-02-04 15:58:44.921080",
+ "modified": "2023-02-09 13:08:42.895026",
  "modified_by": "Administrator",
  "module": "master_store_addons",
  "name": "Installment Request",
@@ -112,6 +132,8 @@
  "owner": "Administrator",
  "permissions": [
   {
+   "amend": 1,
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
@@ -121,6 +143,22 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],
