@@ -57,21 +57,21 @@
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Rate",
-   "options": "default_currency",
-   "read_only": 1
+   "options": "default_currency"
   },
   {
    "fieldname": "amount",
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Amount",
+   "options": "default_currency",
    "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-02-11 17:18:56.424914",
+ "modified": "2023-02-12 15:58:07.991779",
  "modified_by": "Administrator",
  "module": "master_store_addons",
  "name": "Installment Request Table",

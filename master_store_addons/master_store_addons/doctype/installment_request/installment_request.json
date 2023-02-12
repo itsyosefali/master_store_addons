@@ -102,6 +102,7 @@
    "fieldname": "total_amount",
    "fieldtype": "Currency",
    "label": "Total Amount",
+   "options": "default_currency",
    "read_only": 1
   },
   {
@@ -109,6 +110,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "fetch_from": "customer.default_currency",
    "fieldname": "default_currency",
    "fieldtype": "Link",
    "label": "Billing Currency",
@@ -124,7 +126,7 @@
    "link_fieldname": "msa_installment_request"
   }
  ],
- "modified": "2023-02-09 13:08:42.895026",
+ "modified": "2023-02-12 15:59:28.796660",
  "modified_by": "Administrator",
  "module": "master_store_addons",
  "name": "Installment Request",
