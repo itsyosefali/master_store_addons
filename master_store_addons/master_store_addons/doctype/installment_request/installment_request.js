@@ -11,6 +11,11 @@ frappe.ui.form.on('Installment Request', {
 			}
 		})
 	},
+	default_currency: function(frm, cdt, cdn) {
+		var child = locals[cdt][cdn];
+		cur_frm.set_currency_labels(["rate"], child.default_currency, "installment_request_table")
+
+	 },
 	price_list: async function(frm) {
 		for(let i = 0; i < frm.doc.installment_request_table.length; i++) {
 			let row = frm.doc.installment_request_table[i];
